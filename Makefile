@@ -73,10 +73,12 @@ LIBDIR       	:= include/
 # Compilar con clang++ si es de 64 bits
 ifeq ($(ARCH),x86_64)
 	CC := g++
+#	CC := aarch64-linux-android21-clang++ 
 #	CC := clang++
 else
 #	CC := g++
-	CC := clang++
+#	CC := clang++
+	CC := aarch64-linux-android21-clang++ 
 endif
 
 LIBS := $(CFLAGS)
