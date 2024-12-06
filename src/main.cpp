@@ -1,3 +1,4 @@
+#include <android/android.hpp>
 #include <iostream>
 #include <cstdlib>
 #include <vector>
@@ -55,7 +56,8 @@ void scanDevices() {
 }
 
 int main() {
-    std::cout << "Escaneando dispositivos Bluetooth cercanos..." << std::endl;
-    scanDevices();
+    //std::cout << "Escaneando dispositivos Bluetooth cercanos..." << std::endl;
+    android();
+    //scanDevices();
     return 0;
 }
