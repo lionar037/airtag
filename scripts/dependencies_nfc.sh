@@ -15,6 +15,12 @@ cd ~/Downloads
 
 wget https://dl.google.com/android/repository/android-ndk-r25c-linux.zip
 
+unzip android-ndk-r25c-linux.zip -d ~/android-ndk
+
+export PATH=$PATH:~/android-ndk/android-ndk-r25c/toolchains/llvm/prebuilt/linux-x86_64/bin
+
+aarch64-linux-android21-clang++ --version
+
 adb push main /data/local/tmp/
 
 adb shell chmod +x /data/local/tmp/main
