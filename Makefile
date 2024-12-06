@@ -160,16 +160,13 @@ cleanobj:
 usr-libs:
 	$(MAKE) -C $(OLED)/
 
-oled:
-	$(MAKE) -C $(OLED)/	
-
 libs:
 	$(MAKE)	-C $(LIBDIR)/
 	$(MAKE) -C $(OLED)/
 
 libs-clean:
 	$(MAKE) clean -C $(LIBDIR)/ 
-	$(MAKE) clean -C $(OLED)/
+	
 
 libs-cleanall:
 	$(MAKE) cleanall -C $(LIBDIR)/ 

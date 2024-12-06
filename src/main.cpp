@@ -7,6 +7,7 @@
 #include <bluetooth/bluetooth.h>
 #include <bluetooth/hci.h>
 #include <bluetooth/hci_lib.h>
+#include <unistd.h> // Necesario para la función close()
 
 void scanDevices() {
     int device_id = hci_get_route(nullptr);
@@ -50,7 +51,7 @@ void scanDevices() {
     }
 
     free(devices);
-    close(sock);
+    close(sock); // Usamos close() para cerrar el socket
 }
 
 int main() {
